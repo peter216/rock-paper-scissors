@@ -10,10 +10,12 @@ def result_string(player_a, player_b):
         return f"Both did {player_a}. They tied."
     elif (player_a, player_b) in all_wins:
         verb = all_wins[(player_a, player_b)]
-        return f"{player_a} {verb} {player_b}! player A wins."
+        return (f"{player_a.capitalize()} "
+            f"{verb} {player_b}! Player A wins.")
     else:
         verb = all_wins[(player_b, player_a)]
-        return f"{player_b} {verb} {player_a}! player B wins."
+        return (f"{player_b.capitalize()} "
+            f"{verb} {player_a}! Player B wins.")
 
 if __name__ == '__main__':
     choices = ["rock", "paper", "scissors"]
