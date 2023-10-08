@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-all_wins = {
-    ("rock", "scissors"): "crushes",
-    ("paper", "rock"): "covers",
-    ("scissors", "paper"): "cuts"
-}
 
 def result_string(player_a, player_b):
+    all_wins = {
+        ("rock", "scissors"): "crushes",
+        ("paper", "rock"): "covers",
+        ("scissors", "paper"): "cuts"
+    }
     if player_a == player_b:
         return f"Both did {player_a}. They tied."
     elif (player_a, player_b) in all_wins:
