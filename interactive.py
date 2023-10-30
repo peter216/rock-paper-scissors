@@ -2,19 +2,19 @@
 import random
 
 class RPS():
+    all_wins = {
+        ("rock", "scissors"): "crushes",
+        ("paper", "rock"): "covers",
+        ("scissors", "paper"): "cuts"
+    }
     def __init__(self, entry):
         self.entry = entry
     def __repr__(self):
         return self.entry.capitalize()
     def fights(self, other):
-        all_wins = {
-            ("rock", "scissors"): "crushes",
-            ("paper", "rock"): "covers",
-            ("scissors", "paper"): "cuts"
-        }
-        if verb := all_wins.get((self.entry, other.entry)):
+        if verb := RPS.all_wins.get((self.entry, other.entry)):
             return f"{self} {verb} {other}! You win!"
-        elif verb := all_wins.get((other.entry, self.entry)):
+        elif verb := RPS.all_wins.get((other.entry, self.entry)):
             return f"{other} {verb} {self}! Computer wins!"
         else:
             return f"Both did {self}. You tied."
