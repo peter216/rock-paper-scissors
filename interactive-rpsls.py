@@ -4,8 +4,15 @@ import random
 class RPS():
     all_wins = {
         ("rock", "scissors"): "crushes",
+        ("rock", "lizard"): "crushes",
         ("paper", "rock"): "covers",
-        ("scissors", "paper"): "cuts"
+        ("paper", "spock"): "disproves",
+        ("scissors", "paper"): "cuts",
+        ("scissors", "lizard"): "decapitates",
+        ("spock", "scissors"): "smashes",
+        ("spock", "rock"): "vaporizes",
+        ("lizard", "paper"): "eats",
+        ("lizard", "spock"): "poisons",
     }
     def __init__(self, entry):
         self.entry = entry
@@ -25,10 +32,12 @@ class RPS():
 if __name__ == '__main__':
     choices = {"r": "rock",
                "p": "paper",
-               "s": "scissors"}
+               "s": "scissors",
+               "l": "lizard",
+               "k": "spock"}
     while True:
         print()
-        aaa = input("Rock/Paper/Scissors/Quit? ").lower().strip()
+        aaa = input("(r)ock/(p)aper/(s)cissors/(l)izard/spoc(k)/(q)uit? ").lower().strip()
         fchar = aaa[0] if len(aaa) else "0"
         if fchar == 'q':
             break
