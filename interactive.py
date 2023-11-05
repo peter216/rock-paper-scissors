@@ -28,7 +28,7 @@ if __name__ == '__main__':
                "s": "scissors"}
     while True:
         print()
-        aaa = input("Rock/Paper/Scissors/Quit? ").lower().strip()
+        aaa = input("(r)ock/(p)aper/(s)cissors/(q)uit? ").lower().strip()
         fchar = aaa[0] if len(aaa) else "0"
         if fchar == 'q':
             break

@@ -6,13 +6,13 @@ class RPS():
         ("rock", "scissors"): "crushes",
         ("rock", "lizard"): "crushes",
         ("paper", "rock"): "covers",
-        ("paper", "spock"): "disproves",
+        ("paper", "Spock"): "disproves",
         ("scissors", "paper"): "cuts",
         ("scissors", "lizard"): "decapitates",
-        ("spock", "scissors"): "smashes",
-        ("spock", "rock"): "vaporizes",
+        ("Spock", "scissors"): "smashes",
+        ("Spock", "rock"): "vaporizes",
         ("lizard", "paper"): "eats",
-        ("lizard", "spock"): "poisons",
+        ("lizard", "Spock"): "poisons",
     }
     def __init__(self, entry):
         self.entry = entry
@@ -34,10 +34,10 @@ if __name__ == '__main__':
                "p": "paper",
                "s": "scissors",
                "l": "lizard",
-               "k": "spock"}
+               "k": "Spock"}
     while True:
         print()
-        aaa = input("(r)ock/(p)aper/(s)cissors/(l)izard/spoc(k)/(q)uit? ").lower().strip()
+        aaa = input("(r)ock/(p)aper/(s)cissors/(l)izard/Spoc(k)/(q)uit? ").lower().strip()
         fchar = aaa[0] if len(aaa) else "0"
         if fchar == 'q':
             break
